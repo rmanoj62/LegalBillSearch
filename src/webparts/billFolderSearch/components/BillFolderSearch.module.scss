@@ -1,0 +1,74 @@
+.billFolderSearch {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .searchBox {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .searchButton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0078d4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #005a9e;
+    }
+  }
+
+  .error {
+    color: red;
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+ /*.button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0078d4;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #005a9e;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+*/
+.activePage {
+  background-color: #0078d4;
+  color: #fff;
+}
