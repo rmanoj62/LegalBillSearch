@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { useState } from 'react';
-//import { SPFI, spfi } from "@pnp/sp";
-//import { SPFx } from "@pnp/sp/presets/all";
 import { WebPartContext } from "@microsoft/sp-webpart-base"; // SPFx context
 import { TextField, IconButton, MessageBar, MessageBarType } from '@fluentui/react'; // Fluent UI components
 import Sidebar from "./Sidebar"; // Import Sidebar component
@@ -11,46 +9,12 @@ import styles from "./BillFolderSearch.module.scss"; // Import module-specific s
 export interface IBillFolderSearchProps {
   context: WebPartContext; // SPFx context
 }
-/*interface ISharePointItem {
-  name: string;
-  DocumentLink: string;
-  created?: string;
-  modified?: string;
-  businessUnit?: string;
-  Category?: string;
-  Summary?:string;
-}*/
+
 // Functional Component Definition
 const BillFolderSearch: React.FC<IBillFolderSearchProps> = (props) => {
   //const { context } = props; // Destructure context from props
-  //  const sp: SPFI = spfi().using(SPFx(props.context));
   const [searchQuery, setSearchQuery] = useState<string>(''); // Search query state
-  /*const fetchAllItems = async (): Promise<void> => {
 
-
-    try {
-      const items = await sp.web.lists
-  .getByTitle("Bill & Proposal")
-  .items.select("Id", "Title", "Summary", "DynamicTags", "Created", "Modified", "BusinessUnit", "Category","KeyWord","Judiciary_x0028_Region_x0029_").top(5000)();
-
-
-        const mappedResults = items.map((item) => ({
-          name: item.FileLeafRef || item.Title || `Item ${item.Id}`,
-          url: item.FileRef,
-          type: item.FileSystemObjectType === 1 ? ("Folder" as const) : ("File" as const),
-          created: item.Created,
-          modified: item.Modified,
-          businessUnit: item.Busniess_x0020_Unit?.Title, // Accessing the lookup column Title
-          Categories0: item.Categories0, 
-        }));
-        
-
-    } catch (err) {
-      console.error("Error fetching items:", err);
-     
-    }
-  };
-  */
   // Sample resolutions data for demonstration
   const resolutions = [
     {
